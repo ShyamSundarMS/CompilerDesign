@@ -1,6 +1,6 @@
 %{
 #include <stdio.h>
-#include "art_expr.tab.h"
+#include "PROGRAM.tab.h"
 %}
 %%
 [a-zA-Z][0-9a-zA-Z]*   { return ID; }

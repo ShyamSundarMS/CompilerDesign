@@ -1,5 +1,5 @@
 %{
-#include "tac.tab.h"
+#include "PROGRAM.tab.h"
 #include <string.h>
 %}
 %%

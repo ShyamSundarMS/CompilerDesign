@@ -3,7 +3,7 @@
 ## Aim
 To write a program using FLEX and BISON to generate three-address code (TAC) for a simple arithmetic expression.
 
-## Algorithm
+## Procedure
 
 ### FLEX
 1. Include required headers and define tokens for identifiers, numbers, and operators.
@@ -16,18 +16,18 @@ To write a program using FLEX and BISON to generate three-address code (TAC) for
 3. Generate three-address code during the parsing actions.
 4. Maintain a temporary variable counter to represent intermediate results (e.g., `t1 = b * d`).
 
-## Procedure
-1. Create the FLEX file `tac.l`:
+### Steps
+1. Create the FLEX file `PROGRAM.l`:
    - Tokenize input using patterns for identifiers, numbers, and operators.
    - Pass tokens to BISON.
-2. Create the BISON file `tac.y`:
+2. Create the BISON file `PROGRAM.y`:
    - Parse arithmetic expressions.
    - Generate three-address code using temporary variables (t1, t2, etc.) during parsing.
 3. Compile and run:
    ```
-   flex tac.l
-   bison -d tac.y
-   gcc tac.tab.c lex.yy.c -o tac -lfl
+   flex PROGRAM.l
+   bison -d PROGRAM.y
+   gcc PROGRAM.tab.c lex.yy.c -o tac -lfl
    ./tac
    ```
 4. Input an arithmetic expression like:
@@ -35,15 +35,3 @@ To write a program using FLEX and BISON to generate three-address code (TAC) for
    a = b + c * d
    ```
 5. View generated three-address code.
-
-## Sample Output
-```
-Enter the expression:
-a = b + c * d
-t1 = c * d
-t2 = b + t1
-a = t2
-```
-
-## Result
-Thus, the program to generate three-address code using FLEX and BISON was executed and verified successfully.

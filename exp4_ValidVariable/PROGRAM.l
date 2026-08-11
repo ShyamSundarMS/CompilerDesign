@@ -1,5 +1,5 @@
 %{
-#include "valvar.tab.h"
+#include "PROGRAM.tab.h"
 %}
 %%
 [a-zA-Z]   { return LET; }

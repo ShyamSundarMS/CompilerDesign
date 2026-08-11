@@ -1,5 +1,5 @@
 %{
-#include "cal.tab.h"
+#include "PROGRAM.tab.h"
 #include <stdlib.h>
 %}
 DIGIT [0-9]+

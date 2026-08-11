@@ -1,5 +1,5 @@
 %{
-#include "control.tab.h"
+#include "PROGRAM.tab.h"
 %}
 %%
 "if"        { return IF; }
