@@ -38,3 +38,9 @@ Detailed steps:
 5. Run the executable:
    ```
    ./symtab input.c
+
+5. Run the executable:
+   ```
+   ./symtab input.c
+   ```
+6. Observe the output and verify the tokens and symbol table entries.
