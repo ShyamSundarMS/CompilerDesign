@@ -1,0 +1,20 @@
+```
+$ flex typecheck.l
+$ bison -d typecheck.y
+$ gcc lex.yy.c typecheck.tab.c -o typecheck -lfl
+$ ./typecheck
+Enter declarations and expressions:
+int a; int b; int c;
+a = b * c;
+No type mismatch in expression: a = ...
+
+$ ./typecheck
+Enter declarations and expressions:
+int a; float b; int c;
+a = b + c;
+Type mismatch in assignment to a
+```
+
+## Result
+
+Thus, the FLEX and BISON program for type checking was executed and verified successfully.

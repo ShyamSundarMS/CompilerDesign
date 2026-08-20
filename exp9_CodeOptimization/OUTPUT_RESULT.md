@@ -1,0 +1,28 @@
+Sample Input:
+```
+a = 2 + 4;
+b = d * 1;
+c = s * 2;
+```
+
+Output:
+```
+$ flex optimize.l
+$ bison -d optimize.y
+$ gcc lex.yy.c optimize.tab.c -o optimize -lfl
+$ ./optimize
+Enter Three Address Code statements (end with Ctrl+D):
+a = 2 + 4;
+// Constant Folding: 2 + 4 -> 6
+a = 6
+b = d * 1;
+// Algebraic Simplification: x * 1 -> x
+b = d
+c = s * 2;
+// Strength Reduction: x * 2 -> x + x
+c = s + s
+```
+
+## Result
+
+Thus, the FLEX and BISON program for simple code optimization was executed and verified successfully.
