@@ -1,7 +1,6 @@
 # Experiment 1
 
 ## Algorithm
-
 1. Start the program by including the necessary headers within the FLEX definitions section (`%{ ... %}`).
 2. Define regular expressions for:
    - Identifiers: `[a-zA-Z_][a-zA-Z0-9_]*`
